@@ -2,59 +2,6 @@
 <html lang="en">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5VE4SE401"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-Q5VE4SE401');
-  </script>
-
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>ESUC - Contact</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.ico" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-
-  <!-- Contact form stylesheets (from template)-->
-	<link rel="stylesheet" type="text/css" href="contact_form/vendor/animate/animate.css">
-	<link rel="stylesheet" type="text/css" href="contact_form/vendor/css-hamburgers/hamburgers.min.css">
-	<link rel="stylesheet" type="text/css" href="contact_form/vendor/select2/select2.min.css">
-	<link rel="stylesheet" type="text/css" href="contact_form/css/util.css">
-	<link rel="stylesheet" type="text/css" href="contact_form/css/main.css"> 
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-
-
-  <!-- =======================================================
-  * Template Name: Nova - v1.2.1
-  * Template URL: https://bootstrapmade.com/nova-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-
-
   <title>Contact Form</title>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script type="text/javascript">
@@ -65,21 +12,23 @@
   </script>
   <script type="text/javascript">
       window.onload = function() {
-          document.getElementById('contact1-form validate-form').addEventListener('submit', function(event) {
+          document.getElementById('contact-form').addEventListener('submit', function(event) {
               event.preventDefault();
               // generate a five digit number for the contact_number variable
-              this.contact_number.value = Math.random() * 100000 | 0;
+              // this.contact_number.value = Math.random() * 100000 | 0;
               // these IDs from the previous steps
-              emailjs.sendForm('contact_service', 'contact_form', this)
+              emailjs.sendForm('EmailJS Form Webmail', 'contact_form', this)
                   .then(function() {
                       console.log('SUCCESS!');
-                  }, function(error) {
+                  }, function(error) {  
                       console.log('FAILED...', error);
                   });
           });
       }
   </script>
-  <script type="text/javascript">
+
+<!--
+<script type="text/javascript">
     
   (function ($) {
       "use strict";
@@ -142,7 +91,60 @@
       
 
   })(jQuery);
+
+-->
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5VE4SE401"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q5VE4SE401');
   </script>
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>ESUC - Contact</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+
+  <!-- Contact form stylesheets (from template)-->
+	<link rel="stylesheet" type="text/css" href="contact_form/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="contact_form/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="contact_form/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="contact_form/css/util.css">
+	<link rel="stylesheet" type="text/css" href="contact_form/css/main.css"> 
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+
+  <!-- =======================================================
+  * Template Name: Nova - v1.2.1
+  * Template URL: https://bootstrapmade.com/nova-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 
 </head>
 
@@ -231,7 +233,7 @@
             </div>
           </div>
     
-          <form class="contact1-form validate-form">
+          <form class="contact1-form validate-form" id = "contact-form">
             <div class="container" data-aos="fade-up">
               <span class="contact1-form-title">
                 Contact the Board
