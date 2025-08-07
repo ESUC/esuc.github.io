@@ -39,6 +39,66 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <style>
+    .event-submission-info {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 5px;
+      margin: 25px 0;
+      border: 1px solid #e9ecef;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    .calendar-container {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .event-submission-info p {
+      margin-bottom: 20px;
+      color: #6c757d;
+      font-size: 15px;
+      font-weight: 400;
+    }
+    
+    .event-submission-info strong {
+      color: #015785;
+      font-weight: 600;
+    }
+    
+    .event-submission-info .btn-get-started {
+      display: inline-block;
+      padding: 12px 30px;
+      background: #015785;
+      color: #fff;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .event-submission-info .btn-get-started:hover {
+      background: #014266;
+      transform: translateY(-1px);
+      box-shadow: 0 3px 8px rgba(1, 87, 133, 0.15);
+      color: #fff;
+    }
+    
+    .event-submission-info .btn-get-started:active {
+      background: #01304d;
+      transform: translateY(0);
+      box-shadow: 0 1px 4px rgba(1, 87, 133, 0.15);
+      color: #fff;
+    }
+  </style>
+
   <!-- =======================================================
   * Template Name: Nova - v1.2.1
   * Template URL: https://bootstrapmade.com/nova-bootstrap-business-template/
@@ -117,7 +177,13 @@
             <div class="content ps-lg-5">
               <h3>UCLA Engineering Unified</h3>
               <p>Stay updated with all engineering-related events and activities at UCLA!</p>
-              <iframe src="https://calendar.google.com/calendar/embed?src=5n2aaoduomflnr369951amtlsg%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="1050" height="600" frameborder="0" scrolling="no"></iframe>
+              <div class="event-submission-info">
+                <p><strong>To add an event to our calendar, please fill out this form:</strong></p>
+                <a href="https://forms.gle/yZinw3Uy3tNBpe4N9" target="_blank" rel="noopener" class="btn-get-started">Submit Event</a>
+              </div>
+              <div class="calendar-container">
+                <iframe src="https://calendar.google.com/calendar/embed?src=5n2aaoduomflnr369951amtlsg%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+              </div>
             </div>
           </div>
         </div>
@@ -178,11 +244,11 @@
   <footer id="footer">
     <div class="container d-md-flex py-4">
 
-      <div class="me-md-auto text-center text-md-start">
+      <!-- <div class="me-md-auto text-center text-md-start">
         <div class="credits">
           Developed by <strong><a href="https://www.philipdo.dev/">Philip Do</a>, Rahul Mallick, Rahul Ravi, & William Zhou</strong>
         </div>
-      </div>
+      </div> -->
 
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
         <a href="https://forms.gle/1HVUK9Wc1mYgN6EEA" target="_blank" rel="noopener" class="esuc"><i class="bi bi-envelope"></i></a>
